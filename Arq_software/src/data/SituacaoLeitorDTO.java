@@ -2,9 +2,13 @@ package data;
 
 public class SituacaoLeitorDTO {
 
-	public void cria(String nome, boolean b) {
-		// TODO Auto-generated method stub
-		
+	private String nome;
+	private boolean situacao;
+	
+	public SituacaoLeitorDTO(String nome, boolean b) {
+		// TODO Auto-generated constructor stub
+		this.nome = nome;
+		this.situacao = b;
 	}
 
 }

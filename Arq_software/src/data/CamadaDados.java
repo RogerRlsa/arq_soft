@@ -14,4 +14,9 @@ public class CamadaDados {
 		return null;
 	}
 
+	public LivroDTO buscarLivro(int idLivro) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
