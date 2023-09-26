@@ -32,8 +32,32 @@ public class EfetuarEmprestimoRT {
 		
 		LivroDTO livro = dados.buscarLivro(idLivro);
 		
-		List<> nc = dados.buscaEmprestimoLivroNConcluidos(idLivro);
-		return null;
+		List<EmprestimoDTO> nc = dados.buscaEmprestimoLivroNConcluidos(idLivro);
+		if(nc==null) {
+			emprestimo.add(idLivro);
+		}
+		Date date = new Date();
+		if (date.getMonth()<11) {
+			date.setMonth(date.getMonth()+1);
+		}else {
+			date.setYear(date.getYear()+1);
+			date.setMonth(0);
+		}
+		return date;
+	}
+
+	public void encerrarEmprestimo(int idLeitor, List<Integer> emprestimo) {
+		// TODO Auto-generated method stub
+		CamadaDados data = new CamadaDados();
+		for (int idLivro: emprestimo) {
+			List<EmprestimoDTO> nc = data.buscaEmprestimoLivroNConcluidos(idLivro);
+			if(nc == null) {
+				Date dataEmprestimo = new Date();
+				Date dataDevolucao = dataEmprestimo;
+				data.armazenarEmprestimoLivro(idLeitor,idLivro,dataEmprestimo,dataDevolucao);
+			}
+		}
+		
 	}
 
 }
