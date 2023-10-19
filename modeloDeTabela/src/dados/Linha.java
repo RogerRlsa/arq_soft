@@ -14,4 +14,14 @@ public class Linha {
 		return null;
 	}
 
+	public boolean getBoolean(String string) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public static int getLivro() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

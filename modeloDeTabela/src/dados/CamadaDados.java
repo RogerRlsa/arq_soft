@@ -8,4 +8,14 @@ public class CamadaDados {
 		return new ResultSet();
 	}
 
+	public static ResultSet buscarEmprestimosLivroNConcluidos(int idLivro) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static ResultSet buscaEmprestimosNConcluidos(ResultSet rs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -22,4 +22,9 @@ public class LeitorMTE {
 		return rs;
 	}
 
+	public static ResultSet getSituacaoAtual(ResultSet rs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
