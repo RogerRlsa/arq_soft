@@ -1,6 +1,7 @@
 package dados;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class ResultSet {
@@ -12,7 +13,7 @@ public class ResultSet {
 		
 	}
 
-	public ArrayList<Linha> getLinhas(String string) {
+	public Iterator<Linha> getLinhas(String string) {
 		// TODO Auto-generated method stub
 		return null;
 	}
