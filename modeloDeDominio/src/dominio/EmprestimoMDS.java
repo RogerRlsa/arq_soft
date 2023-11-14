@@ -23,7 +23,7 @@ public class EmprestimoMDS {
 
 	public SituacaoLeitorDTO iniciarEmprestimo() {
 		// TODO Auto-generated method stub
-		int idLeitor = 500000;
+		int idLeitor = 5000;
 		LeitorMDS leitor = LeitorMDS.buscarLeitor(idLeitor);
 		
 		SituacaoLeitorDTO st = leitor.getSituacaoAtual();

@@ -9,14 +9,17 @@ import dados.SituacaoLeitorDTO;
 
 public class LeitorMDS {
 	
-	private int idLeitor;
+	private int id;
 	private String nome;
 	
 	public static LeitorMDS buscarLeitor(int idLeitor) {
 		// TODO Auto-generated method stub
 		
 		LeitorDTO leitor = CamadaDados.buscaLeitor(idLeitor);
-		return null;
+		LeitorMDS l = new LeitorMDS();
+		l.id = leitor.getId();
+		l.nome = leitor.getNome();
+		return l;
 	}
 
 	public SituacaoLeitorDTO getSituacaoAtual() {
