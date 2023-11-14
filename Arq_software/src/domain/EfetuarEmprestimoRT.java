@@ -48,13 +48,14 @@ public class EfetuarEmprestimoRT {
 
 	public void encerrarEmprestimo(int idLeitor, List<Integer> emprestimo) {
 		// TODO Auto-generated method stub
-		CamadaDados data = new CamadaDados();
+		CamadaDados dados = new CamadaDados();
 		for (int idLivro: emprestimo) {
-			List<EmprestimoDTO> nc = data.buscaEmprestimoLivroNConcluidos(idLivro);
+			LivroDTO livro = dados.buscarLivro(idLivro);
+			List<EmprestimoDTO> nc = dados.buscaEmprestimoLivroNConcluidos(idLivro);
 			if(nc == null) {
 				Date dataEmprestimo = new Date();
 				Date dataDevolucao = dataEmprestimo;
-				data.armazenarEmprestimoLivro(idLeitor,idLivro,dataEmprestimo,dataDevolucao);
+				dados.armazenarEmprestimoLivro(idLeitor,idLivro,dataEmprestimo,dataDevolucao);
 			}
 		}
 		

@@ -18,7 +18,8 @@ public class CamadaDados {
 
 	public LivroDTO buscarLivro(int idLivro) {
 		// TODO Auto-generated method stub
-		return null;
+		LivroDTO livro = new LivroDTO();
+		return livro;
 	}
 
 	public List<EmprestimoDTO> buscaEmprestimoLivroNConcluidos(int idLivro) {
